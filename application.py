@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import pickle
 import numpy as np
 import pandas as pd
+import threading
 
 app = Flask(__name__)
 model = pickle.load(open('LinearRegressionModel.pkl', 'rb'))
@@ -46,5 +47,8 @@ def predict():
     return str(prediction[0])
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
+
+if __name__ == "__main__":
+    threading.Thread(target=app.run, kwargs={"debug": True, "use_reloader": False}).start()
