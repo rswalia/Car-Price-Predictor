@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import pickle
 import numpy as np
 import pandas as pd
-import threading
+# import threading
 
 app = Flask(__name__)
 model = pickle.load(open('LinearRegressionModel.pkl', 'rb'))
@@ -30,7 +30,7 @@ def predict():
     fuel_type = request.form.get('fuel_type')
     kms_driven = int(request.form.get('kilo_driven'))
 
-    # print(company, name, year, fuel_type, kms_driven)
+    print(company, name, year, fuel_type, kms_driven)
     data = {
         'name': [name],
         'company': [company],
@@ -47,8 +47,8 @@ def predict():
     return str(prediction[0])
 
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=5000)
 
-if __name__ == "__main__":
-    threading.Thread(target=app.run, kwargs={"debug": True, "use_reloader": False}).start()
+# if __name__ == "__main__":
+#     threading.Thread(target=app.run, kwargs={"debug": True, "use_reloader": False}).start()
