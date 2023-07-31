@@ -48,3 +48,9 @@ Link for dataset: https://github.com/rajtilakls2510/car_price_predictor/blob/mas
 * If you are searching for Code, Algorithms used and Accuracy of the model Please Open "Notebook.ipynb" file
 
 * And Please do ⭐ the repository, if it helped you in anyway.
+
+---
+
+Thank you for choosing Car Price Predictor! We hope our machine learning-based price estimation system helps you make better decisions in the used car market. If you have any questions or suggestions, please feel free to contact us.
+
+Happy car shopping! 🚗💨
