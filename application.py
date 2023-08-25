@@ -44,7 +44,11 @@ def predict():
 
     # prediction = model.predict(pd.DataFrame(columns=['name', 'company', 'year', 'kms_driven', 'fuel_type']))
     print(str(prediction[0]))
-    return str(prediction[0])
+    # Assuming prediction[0] is the number you want to round off
+    rounded_prediction = round(prediction[0], 2)
+    rounded_prediction_str = str(rounded_prediction)
+    return rounded_prediction_str
+    # return str(prediction[0])
 
 
 if __name__ == '__main__':
